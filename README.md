@@ -7,7 +7,7 @@ Sistema Operacional: Unix Like
 
 ## Instalação
 
-$ git clone https://github.com/Ramon5/Lista2PO.git
+$ git clone https://github.com/Ramon5/Lista2PO.git \
 $ cd lista2PO/
 
 ## Execução
