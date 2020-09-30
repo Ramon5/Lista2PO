@@ -10,7 +10,7 @@ class Execution:
             try:
                 choice = int(
                     input(
-                        "\n0 - Sair \n1 - Calcular custo de itinerário\n2 - Gerar grafo\n3 - Estradas de uma cidade (Entrada e Saída)\n4 - Cidade com maior nº de entradas\n5 - Verificar se todas as ligações são de mão dupla\n6 - Saídas diretas\n7 - Informações Gerais\n8 - Verificar roteiros\n9 - Caminho possível\n10 - Verificar se grafo é Hamilthoniano\n\n"
+                        "\n0 - Sair \n1 - Calcular custo de itinerário\n2 - Gerar grafo\n3 - Estradas de uma cidade (Entrada e Saída)\n4 - Cidade com maior nº de entradas\n5 - Verificar se todas as ligações são de mão dupla\n6 - Saídas diretas\n7 - Informações Gerais\n8 - Verificar roteiros\n9 - Caminho possível\n10 - Verificar se grafo é Hamilthoniano\n11 - Exibir matriz de adjacencia\n\n"
                     )
                 )
                 if choice == 0:
@@ -69,6 +69,10 @@ class Execution:
                             print("\nÉ possível")
                         else:
                             print("\nNão é possível")
+                elif choice == 11:
+                    if self.graph:
+                        matrix = self.graph.get_matrix()
+                        ChallengeTwo.show_matrix(matrix)
 
             except ValueError:
                 print("\nInforme um número inteiro")

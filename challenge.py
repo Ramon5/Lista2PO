@@ -77,7 +77,9 @@ class Vertice:
 
 
 class ChallengeTwo:
+
     def __init__(self, length):
+        super().__init__()
         self._length = length
         self._graph = []
         self._matrix = []
@@ -96,6 +98,17 @@ class ChallengeTwo:
             for j in range(self._length):
                 line.append(random.randint(0, 1))
             self._matrix.append(line)
+    
+    def get_matrix(self):
+        return self._matrix
+    
+    @classmethod
+    def show_matrix(cls, matrix):
+        print()
+        for i in range(len(matrix)):
+            for j in range(len(matrix[i])):
+                print(f"{matrix[i][j]}\t", end="")
+            print()
 
     def _define_routes(self):
         """ define entry and exit roads to vertices"""
